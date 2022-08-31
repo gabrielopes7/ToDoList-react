@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: grid;
+    padding: 5px;
+    grid-template-rows: 1fr 4fr 1fr;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.171);
+    max-width: 300px;
+    height: 80vh;
+}
+
+#title{
+    background-color: aquamarine;
+}
+
+
+#addDo{
+    text-align: center;
+}
+
+#addDo button{
+    color: #FFFFFF;
+    font-size: 2.8rem;
+    font-weight: 700;
+    position: relative;
+    top: 35px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.171);
+    border-radius: 50%;
+    background-color: rgb(255, 174, 0);
+}
+
+#addDo button:hover{
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: 0.8s;
+}
