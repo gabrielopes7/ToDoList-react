@@ -1,11 +1,18 @@
-import './styles/App.css';
-import Body from './Body.js';
+import "./styles/App.css";
+import "./styles/Body.css";
+import AddTask from "./AddTask";
+import ToDoList from "./TodoList";
+import Title from "./Title.js"
+import {useState}  from 'react'
 
 function App() {
-  return (
-    <div>
-      <Body></Body>
+  const [todoList, setTodoList] = useState([]);
 
+  return (
+    <div id="container">
+      <Title></Title>
+      <ToDoList todoList={todoList}></ToDoList>
+      <AddTask todoList={todoList} setTodoList={setTodoList}/>
     </div>
   );
 }
