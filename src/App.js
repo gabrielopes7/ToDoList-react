@@ -11,7 +11,7 @@ function App() {
   return (
     <div id="container">
       <Title></Title>
-      <ToDoList todoList={todoList}></ToDoList>
+      <ToDoList todoList={todoList} setTodoList={setTodoList}></ToDoList>
       <AddTask todoList={todoList} setTodoList={setTodoList}/>
     </div>
   );

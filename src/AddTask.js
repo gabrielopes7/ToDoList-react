@@ -19,13 +19,15 @@ function AddTask({todoList, setTodoList}){
             window.alert("É necessário digitar uma tarefa")
         }else{
             setTodoList([...todoList,submit]);
+            localStorage.setItem("tasks", JSON.stringify([...todoList,submit]))
+            setSubmit("")
         }
     }
     
     
     return(
         <div id="addDo">
-            <input className="inputToAddTask" placeholder="Digite sua tarefa" onKeyDown={enterToSubmit} onChange={handleText} value={submit}></input>
+            <input className="inputToAddTask" placeholder="Digite sua tarefa" onKeyDown={enterToSubmit} onChange={handleText} value={submit} autoFocus></input>
             <button id="buttonAdd" onClick={submitTextToAdd}>+</button>
         </div>
     );
