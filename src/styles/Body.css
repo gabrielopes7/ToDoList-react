@@ -120,6 +120,37 @@
     }
     #inputSetTitle{
         max-width: 300px;
+        font-size: 1.6rem;
     
+    }
+    #addDo #buttonAdd{
+        font-size: 2.2rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+.inputToAddTask{
+    font-size: 1.2rem;
+    outline: none;
+    height: 25px;
+}
+}
+
+@media (max-width: 400px){
+    #container{
+        width: 350px;
+    }
+    #inputSetTitle{
+        max-width: 280px;
+        font-size: 1.4rem;   
+    }
+    #addDo #buttonAdd{
+        font-size: 2rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .inputToAddTask{
+        height: 20px;
     }
 }

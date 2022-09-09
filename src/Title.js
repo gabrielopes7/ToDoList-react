@@ -8,6 +8,7 @@ function Title() {
 
   function handleText(event){
     const titleToDo = event.target.value;
+    document.title = titleToDo;
     localStorage.setItem("title", titleToDo);
   }
 
@@ -17,7 +18,7 @@ function Title() {
       <input
         id="inputSetTitle"
         type="text"
-        maxLength={25}
+        maxLength={22}
         placeholder="Título"
         onChange={handleText}
       ></input>
