@@ -17,7 +17,7 @@ function Title() {
       <input
         id="inputSetTitle"
         type="text"
-        maxLength={20}
+        maxLength={25}
         placeholder="Título"
         onChange={handleText}
       ></input>

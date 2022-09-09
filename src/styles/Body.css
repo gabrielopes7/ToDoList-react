@@ -13,7 +13,7 @@
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.171);
-    max-width: 500px;
+    width: 500px;
     height: 80vh;
 }
 
@@ -21,10 +21,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #inputSetTitle{
     text-align: center;
+    max-width: 400px;
     font-size: 2rem;
     font-weight: 700;
     border: none;
@@ -81,6 +83,7 @@
     justify-content: space-around;
     align-items: flex-end;
     text-align: center;
+    width: 100%;
 }
 
 #addDo #buttonAdd{
@@ -111,10 +114,12 @@
 }
 
 
-
-@media screen 
-   and (min-width : 1600px) {
+@media (max-width: 600px){
     #container{
-        max-width: 500px;
+        width: 400px;
+    }
+    #inputSetTitle{
+        max-width: 200px;
+    
     }
 }
