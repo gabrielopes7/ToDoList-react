@@ -131,14 +131,13 @@
     
 .inputToAddTask{
     font-size: 1.2rem;
-    outline: none;
-    height: 25px;
+    height: 30px;
 }
 }
 
 @media (max-width: 400px){
     #container{
-        width: 350px;
+        width: 300px;
     }
     #inputSetTitle{
         max-width: 280px;
@@ -146,11 +145,12 @@
     }
     #addDo #buttonAdd{
         font-size: 2rem;
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
     }
     
     .inputToAddTask{
-        height: 20px;
+        font-size: 1.1rem;
+        height: 30px;
     }
 }
