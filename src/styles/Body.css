@@ -1,10 +1,10 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-#container{
+#container {
     display: grid;
     padding: 5px;
     grid-template-rows: 1fr 4fr;
@@ -17,14 +17,14 @@
     height: 80vh;
 }
 
-#title{
+#title {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-#inputSetTitle{
+#inputSetTitle {
     text-align: center;
     max-width: 400px;
     font-size: 2rem;
@@ -35,15 +35,15 @@
 
 }
 
-#cardBody{
+#cardBody {
     overflow: auto;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: min-content;
 }
 
-.tasks{
+.tasks {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,19 +52,20 @@
     margin-left: 50px;
 }
 
-.tasks input{
+.tasks input {
     width: 15px;
     height: 15px;
 }
-#check:checked + .labelCheck{
+
+#check:checked+.labelCheck {
     text-decoration: line-through;
 }
 
-.tasks label{
+.tasks label {
     margin-left: 10px;
 }
 
-.buttonDel{
+.buttonDel {
     background-color: #f50202e8;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.363);
     color: #FFFFFF;
@@ -74,11 +75,11 @@
     margin-right: 20px;
     border-radius: 50%;
     cursor: pointer;
-    
+
 }
 
 
-#addDo{
+#addDo {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -86,7 +87,7 @@
     width: 100%;
 }
 
-#addDo #buttonAdd{
+#addDo #buttonAdd {
     color: #FFFFFF;
     margin-bottom: 10px;
     font-size: 2.8rem;
@@ -99,13 +100,13 @@
     background-color: rgb(255, 174, 0);
 }
 
-#addDo #buttonAdd:hover{
+#addDo #buttonAdd:hover {
     cursor: pointer;
     transform: rotate(90deg);
     transition: 0.8s;
 }
 
-.inputToAddTask{
+.inputToAddTask {
     font-size: 1.2rem;
     outline: none;
     height: 30px;
@@ -114,42 +115,46 @@
 }
 
 
-@media (max-width: 600px){
-    #container{
+@media (max-width: 600px) {
+    #container {
         width: 400px;
     }
-    #inputSetTitle{
+
+    #inputSetTitle {
         max-width: 300px;
         font-size: 1.6rem;
-    
+
     }
-    #addDo #buttonAdd{
+
+    #addDo #buttonAdd {
         font-size: 2.2rem;
         width: 50px;
         height: 50px;
     }
-    
-.inputToAddTask{
-    font-size: 1.2rem;
-    height: 30px;
-}
+
+    .inputToAddTask {
+        font-size: 1.2rem;
+        height: 30px;
+    }
 }
 
-@media (max-width: 400px){
-    #container{
+@media (max-width: 400px) {
+    #container {
         width: 300px;
     }
-    #inputSetTitle{
+
+    #inputSetTitle {
         max-width: 280px;
-        font-size: 1.4rem;   
+        font-size: 1.4rem;
     }
-    #addDo #buttonAdd{
+
+    #addDo #buttonAdd {
         font-size: 2rem;
         width: 42px;
         height: 42px;
     }
-    
-    .inputToAddTask{
+
+    .inputToAddTask {
         font-size: 1.1rem;
         height: 30px;
     }

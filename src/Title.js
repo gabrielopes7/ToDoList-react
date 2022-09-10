@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 
 function Title() {
+  useEffect(() => {
+    document.getElementById("inputSetTitle").value =
+      localStorage.getItem("title");
+  }, []);
 
-  useEffect(()=>{
-    document.getElementById("inputSetTitle").value = localStorage.getItem("title")
-  },[])
-
-  function handleText(event){
+  function handleText(event) {
     const titleToDo = event.target.value;
     document.title = titleToDo;
     localStorage.setItem("title", titleToDo);
   }
-
 
   return (
     <div id="title">
@@ -21,7 +20,7 @@ function Title() {
         maxLength={22}
         placeholder="Título"
         onChange={handleText}
-      ></input>
+       />
     </div>
   );
 }
