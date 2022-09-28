@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
-import {ContextAPI} from "./Context"
+import React from "react";
+import {useSelector, useDispatch} from "react-redux";
 
 function ToDoList() {
-  const [todoList, setTodoList] = useContext(ContextAPI);
+
+  const todoList = useSelector((state) => {return state})
+  const dispatch = useDispatch();
 
   function deleteTask(event) {
     const divTaskID = event.target.parentNode.parentNode.id;
     const listWithItemRemoved = [...todoList];
     listWithItemRemoved.splice(divTaskID, 1);
-    setTodoList(listWithItemRemoved);
+    dispatch({type: "REMOVE", payload: listWithItemRemoved});
     localStorage.setItem("tasks", JSON.stringify(listWithItemRemoved));
   }
 

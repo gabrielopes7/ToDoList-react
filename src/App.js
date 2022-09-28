@@ -1,19 +1,23 @@
 import "./styles/App.css";
 import "./styles/Body.css";
-import AddTask from "./AddTask";
-import ToDoList from "./TodoList";
-import Title from "./Title.js";
-import { ContextState } from "./Context"
+import AddTask from "./components/AddTask";
+import ToDoList from "./components/TodoList";
+import Title from "./components/Title.js";
+import { legacy_createStore } from "redux";
+import {Provider} from "react-redux";
+import todoReducer from "./reducers/todoReducer";
 
 function App() {
+
+  const store = legacy_createStore(todoReducer);
 
   return (
     <div id="container">
       <Title/>
-      <ContextState>
+      <Provider store={store}>
         <ToDoList/>
         <AddTask/>
-      </ContextState>
+      </Provider>
     </div>
   );
 }

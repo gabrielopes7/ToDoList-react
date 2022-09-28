@@ -1,9 +1,10 @@
-import React, { useState, useContext } from "react";
-import {ContextAPI} from "./Context"
+import React, { useState} from "react";
+import {useSelector, useDispatch} from "react-redux";
 
 function AddTask() {
   const [submitText, setSubmitText] = useState("");
-  const [todoList, setTodoList] = useContext(ContextAPI);
+  const todoList = useSelector((state) => {return state})
+  const dispatch = useDispatch();
 
   function enterToSubmit(event) {
     if (event.key === "Enter") {
@@ -19,7 +20,7 @@ function AddTask() {
     if (submitText.trim() === "") {
       window.alert("Por favor, insira uma tarefa!")
     } else {
-      setTodoList([...todoList, submitText]);
+      dispatch({type: "ADD", payload: submitText});
       localStorage.setItem("tasks", JSON.stringify([...todoList, submitText]));
       setSubmitText("");
     }
