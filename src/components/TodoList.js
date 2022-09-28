@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 
 function ToDoList() {
 
   const todoList = useSelector((state) => {return state})
   const dispatch = useDispatch();
+
+  useEffect(()=>{
+    const taskStorage = localStorage.getItem("tasks");
+    if(taskStorage){
+      dispatch({type: "LOAD", payload: JSON.parse(taskStorage)})
+    }
+    }, [])
 
   function deleteTask(event) {
     const divTaskID = event.target.parentNode.parentNode.id;

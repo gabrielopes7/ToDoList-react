@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function Title() {
 
   useEffect(()=>{
-    document.getElementById("inputSetTitle").value = localStorage.getItem("title")
+    document.getElementById("inputSetTitle").value = localStorage.getItem("title");
   },[])
 
   function handleText(event){
